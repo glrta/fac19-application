@@ -1,0 +1,15 @@
+.layout {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--mainborder);
+}
+
+footer {
+    text-align: center;
+}
+footer p {
+    padding-top: var(--mainborder);
+    font-size: .7rem;
+}

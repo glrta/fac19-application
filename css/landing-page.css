@@ -1,0 +1,105 @@
+
+.home {
+    width: 100vw;
+    /* align-items: center; */
+    justify-content: center;
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: 5vw 1fr var(--mainborder) 1fr 5vw;
+    grid-template-rows: 10vh 1fr 1fr 10vh;
+}
+
+.left {
+    grid-column: 2 / span 2;
+    grid-row: 2 / span 1;
+    border: var(--mainborder) solid var(--accentcolor);
+    border-bottom: none;
+}
+.right {
+    grid-column: 3 / span 2;
+    grid-row: 3 / span 1;
+    border: var(--mainborder) solid var(--accentcolor);
+    border-top: none;
+    display: flex;
+    align-items: flex-end;
+}
+h1, h2 {
+    text-transform: uppercase;
+    font-size: calc(2rem + 3vw);
+    font-weight: bold;
+    padding: var(--mainborder);
+}
+/* nav {
+    grid-column: 4 / span 1;
+    grid-row: 2 / span 1;
+    padding: var(--mainborder);
+}
+nav ul li {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-end;
+    padding: var(--spacing) 0;
+} */
+
+nav {
+    grid-column: 4 / span 1;
+    grid-row: 2 / span 1;
+    padding: var(--mainborder);
+    display: flex;
+    align-items: flex-end;
+    writing-mode: vertical-lr;
+    
+}
+nav ol li {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-end;
+    padding: var(--spacing);
+}
+
+.portfolio {
+    grid-column: 2 / span 2;
+    grid-row: 3 / span 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    padding: var(--mainborder);
+}
+
+.fab {
+    width: 2rem;
+    font-size: 1.5rem;
+    padding: var(--spacing);
+    transform: rotate(-180deg);
+}
+
+@media screen and (max-width: 880px) {
+    .left {
+        grid-column: 2 / span 3;
+    }
+    .right {
+        grid-column: 2 / span 3;
+        justify-content: flex-end;
+    }
+    nav {
+        grid-column: 4 / span 1;
+        grid-row: 1 / span 1;
+        writing-mode: horizontal-tb;
+        justify-content: flex-end;
+    }
+    .portfolio {
+        grid-column: 2 / span 3;
+        grid-row: 4 / span 1;
+        flex-direction: row;
+        justify-content: center;
+        align-items: baseline;
+        writing-mode: horizontal-tb;
+        transform: rotate(0deg);
+    }
+    .fab {
+        transform: rotate(0deg);
+    }
+    
+}
