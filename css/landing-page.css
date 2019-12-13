@@ -37,6 +37,10 @@ nav {
 }
 .crumb {
     padding: var(--spacing);
+    color: var(--accentcolor);
+}
+.active {
+    color: var(--basecolor);
 }
 .portfolio {
     grid-column: 2 / span 2;
@@ -59,6 +63,12 @@ nav {
     content: " >>";
     color: var(--accentcolor);
     font-size: 1.5rem;
+}
+
+@media screen and (max-width: 400px) {
+    .crumb {
+        padding: .1rem;
+}
 }
 
 @media screen and (max-width: 725px) {
