@@ -5,11 +5,21 @@
     align-items: center;
     padding: var(--mainborder);
 }
-
+.carousel {
+    grid-column: 5 / span 1;
+    grid-row: 2 / span 1;
+    align-self: end;
+    font-size: 3rem;
+    margin-left: -10px;
+    color: var(--accentcolor);
+    text-shadow: var(--basecolor) 2px;
+    background-color: var(--background);
+}
 footer {
     text-align: center;
 }
 footer p {
     padding-top: var(--mainborder);
     font-size: .7rem;
+    color: var(--mutecolor);
 }

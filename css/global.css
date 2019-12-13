@@ -1,9 +1,11 @@
 :root {
     --mainborder: 10px;
     --spacing: .3rem;
-    --basecolor: black;
-    --accentcolor: BlueViolet;
-    --secondaccentcolor: SpringGreen;
+    --basecolor:#8A2BE2;
+    --accentcolor: #00ff7f;
+    --mutecolor: #b8a1db;
+    --background: #fff;
+    --textcolor: #000;
 }
 
 * {
@@ -11,9 +13,9 @@
 }
 a {
     text-decoration: none;
-    color: var(--accentcolor);
+    color: var(--basecolor);
 }
 html {
     font-family: 'Hind', helvetica, san-serif;
-    color: var(--accentcolor);
+    color: var(--basecolor);
 }
