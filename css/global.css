@@ -2,12 +2,14 @@
     --mainborder: 10px;
     --doubleborder: 20px;
     --spacing: .3rem;
-    --basecolor:#801edb;
-    --accentcolor: #00ff7f;
-    /* or #00ff00 ? - pure green */
-    --mutecolor: #e2c9fa;
+    --basecolor: #8000ff;
+    --accentcolor: #00ff80; 
+    /* #00ffea; */
+    /* #00ff7f; */
+    --mutecolor: #f5ebff;
+    --secondarymute: #d8b1ff;
     --background: #fcfcfc;
-    --textcolor: #000;
+    /* --textcolor: #7600eb; */
 }
 
 * {

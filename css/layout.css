@@ -15,13 +15,16 @@
     text-shadow: var(--basecolor) 2px;
     background-color: var(--background);
 }
+
+
+
 footer {
     text-align: center;
 }
 footer p {
     padding-top: var(--mainborder);
     font-size: .7rem;
-    color: var(--mutecolor);
+    color: var(--secondarymute);
 }
 
 @media screen and (max-width: 600px) {

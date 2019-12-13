@@ -8,7 +8,6 @@
     <meta name="author" content="Giovanna Licia R. T. Aveiro">
     <meta name="description" content="personal website submitted in December 2019 to Founders and Coders for the 2020 spring cohort">
     <link href="https://fonts.googleapis.com/css?family=Hind:300,400,500,600,700&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/f28284acce.js"></script>
     <link href="css/main.css" rel="stylesheet">
 </head>
 <body class="layout">
@@ -17,21 +16,21 @@
             <h1>Giovanna L.</h1>
         </header>
         <section class="carousel">
-            <!-- <div class="slide surname">
+            <div class="slide surname" id="surname">
                 <h2>R. T. Aveiro</h2>
-            </div> -->
-            <div class="slide about">
+            </div>
+            <div class="slide about d-none" id="about">
                 <h3>about me</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim aliquam eius unde mollitia illum nisi eveniet repellat delectus, exercitationem aperiam corrupti neque sequi perspiciatis natus, similique quas perferendis. Similique, harum.</p>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum quam cum fuga assumenda sed vel quae at laborum eos, consectetur commodi cupiditate minima reiciendis quis suscipit quo? Rerum, minus numquam!</p>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error velit dignissimos maiores itaque nam rem tenetur expedita exercitationem, sapiente nobis inventore excepturi dolorem. Animi sed alias quo. Saepe, consectetur eaque!</p>
             </div>
-            <!-- <div class="slide why">
-                <h3>about me</h3>
+            <div class="slide why d-none" id="why">
+                <h3>why</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim aliquam eius unde mollitia illum nisi eveniet repellat delectus, exercitationem aperiam corrupti neque sequi perspiciatis natus, similique quas perferendis. Similique, harum.</p>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum quam cum fuga assumenda sed vel quae at laborum eos, consectetur commodi cupiditate minima reiciendis quis suscipit quo? Rerum, minus numquam!</p>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error velit dignissimos maiores itaque nam rem tenetur expedita exercitationem, sapiente nobis inventore excepturi dolorem. Animi sed alias quo. Saepe, consectetur eaque!</p>
-            </div> -->
+            </div>
         </section>
         <nav>
             <ul>
@@ -54,11 +53,13 @@
                 </i>freecodecamp</a>
             </li>
         </ul>
-        <a class="arrow" href=""><i class="fas fa-angle-double-right"></i></a>
+        <a class="arrow" id="next"><i class="fas fa-angle-double-right"></i></a>
+        
     </main>
     <footer>
-        <a class="link" title="website repository on GitHub" href="">this@GitHub</a>
+        <a title="website repository on GitHub" href="">this@GitHub</a>
         <p>2020 spring cohort applicant</p>
     </footer>
 </body>
+<script src="js/main.js"></script> 
 </html>

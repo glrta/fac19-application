@@ -1,5 +1,9 @@
 @import "./reset.css";
+@import "./fontawesome-free-5.12.0-web/css/fontawesome.min.css";
+@import "./fontawesome-free-5.12.0-web/css/brands.min.css";
+@import "./fontawesome-free-5.12.0-web/css/solid.min.css";
 @import "./global.css";
 @import "./layout.css";
 @import "./landing-page.css";
-@import "./carousel.css"
+@import "./carousel.css";
+

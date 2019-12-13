@@ -14,15 +14,19 @@
     flex-direction: column-reverse;
     z-index: 1;
 }
+.d-none {
+    display: none;
+}
 h2, h3 {
     margin-bottom: -10px;
 }
 h3 {
-    color:var(--mutecolor);
+    color: var(--mutecolor);
 }
 
 .slide p {
     padding: var(--spacing);
+    /* color: var(--textcolor); */
 }
 
 @media screen and (max-width: 725px) {
