@@ -31,6 +31,9 @@ h1, h2 {
     font-size: calc(2rem + 3vw);
     font-weight: bold;
 }
+h2 {
+    margin-bottom: -10px;
+}
 nav {
     grid-column: 4 / span 1;
     grid-row: 2 / span 1;
@@ -67,7 +70,7 @@ nav {
     color: var(--accentcolor)
 }
 
-@media screen and (max-width: 880px) {
+@media screen and (max-width: 725px) {
     .left {
         grid-column: 2 / span 3;
     }
@@ -92,6 +95,12 @@ nav {
     }
     .fab {
         transform: rotate(0deg);
+    }
+    .home {
+        background-image: url(../images/glrta.jpg); 
+        background-position: center;
+        background-size: 65%;
+        background-repeat: no-repeat;
     }
     
 }

@@ -23,3 +23,9 @@ footer p {
     font-size: .7rem;
     color: var(--mutecolor);
 }
+
+@media screen and (max-width: 600px) {
+    .carousel {
+        margin-left: -25px;
+    }
+}

@@ -1,10 +1,10 @@
 :root {
     --mainborder: 10px;
     --spacing: .3rem;
-    --basecolor:#8A2BE2;
+    --basecolor:#801edb;
     --accentcolor: #00ff7f;
     --mutecolor: #b8a1db;
-    --background: #fff;
+    --background: #fcfcfc;
     --textcolor: #000;
 }
 
@@ -18,4 +18,5 @@ a {
 html {
     font-family: 'Hind', helvetica, san-serif;
     color: var(--basecolor);
+    background: var(--background);
 }
