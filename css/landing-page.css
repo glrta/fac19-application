@@ -7,8 +7,7 @@
     grid-template-columns: 5vw 1fr var(--mainborder) 1fr 5vw;
     grid-template-rows: 10vh 1fr 1fr 10vh;
 }
-
-.left, .right {
+.left, .carousel {
     border: var(--mainborder) solid var(--basecolor);
 }
 .left {
@@ -16,23 +15,13 @@
     grid-row: 2 / span 1;
     border-bottom: none;
 }
-.right {
-    grid-column: 3 / span 2;
-    grid-row: 3 / span 1;
-    border-top: none;
-    display: flex;
-    align-items: flex-end;
-}
-.portfolio, nav, h1, h2 {
-    padding: var(--mainborder);
-}
 h1, h2, h3 {
     text-transform: uppercase;
     font-size: calc(2rem + 3vw);
     font-weight: bold;
 }
-h2 {
-    margin-bottom: -10px;
+ h1, h2, h3, nav, .portfolio {
+    padding: var(--mainborder);
 }
 nav {
     grid-column: 4 / span 1;
@@ -40,8 +29,9 @@ nav {
     display: flex;
     align-items: flex-end;
     writing-mode: vertical-lr;
+    background-color: var(--background);
 }
-.portfolio, .crumb {
+.crumb, .portfolio {
     display: flex;
     flex-direction: column;
 }
@@ -75,10 +65,6 @@ nav {
     .left {
         grid-column: 2 / span 3;
     }
-    .right {
-        grid-column: 2 / span 3;
-        justify-content: flex-end;
-    }
     nav {
         grid-column: 4 / span 1;
         grid-row: 1 / span 1;
@@ -103,5 +89,4 @@ nav {
         background-size: 65%;
         background-repeat: no-repeat;
     }
-    
 }
