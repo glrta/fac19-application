@@ -26,7 +26,7 @@
 .portfolio, nav, h1, h2 {
     padding: var(--mainborder);
 }
-h1, h2 {
+h1, h2, h3 {
     text-transform: uppercase;
     font-size: calc(2rem + 3vw);
     font-weight: bold;
@@ -67,7 +67,8 @@ nav {
 }
 .link:hover::after {
     content: " >>";
-    color: var(--accentcolor)
+    color: var(--accentcolor);
+    font-size: 1.5rem;
 }
 
 @media screen and (max-width: 725px) {

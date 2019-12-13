@@ -1,9 +1,11 @@
 :root {
     --mainborder: 10px;
+    --doubleborder: 20px;
     --spacing: .3rem;
     --basecolor:#801edb;
     --accentcolor: #00ff7f;
-    --mutecolor: #b8a1db;
+    /* or #00ff00 ? - pure green */
+    --mutecolor: #e2c9fa;
     --background: #fcfcfc;
     --textcolor: #000;
 }
