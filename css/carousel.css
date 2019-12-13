@@ -26,11 +26,41 @@ h3 {
 
 .slide p {
     padding: var(--spacing);
-    /* color: var(--textcolor); */
+}
+.arrow i {
+
+    font-size: 3rem;
+    color: var(--accentcolor);
+    background-color: var(--background);
+    cursor: pointer;
+}
+.next {
+    grid-column: 5 / span 1;
+    grid-row: 2 / span 1;
+    align-self: end;
+    margin-left: -15px;
+}
+.back {
+    grid-column: 3 / span 2;
+    grid-row: 2 / span 1;
+    align-self: end;
+    margin-left: -25px;
+}
+
+@media screen and (max-width: 600px) {
+    .arrow {
+        margin-left: -25px;
+    }
+    .back {
+        margin-left: -20px;
+    }
 }
 
 @media screen and (max-width: 725px) {
     .carousel {
+        grid-column: 2 / span 3;
+    }
+    .back {
         grid-column: 2 / span 3;
     }
 }

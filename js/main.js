@@ -22,11 +22,11 @@ nextButton.addEventListener("click", (event) => {
     slideOrder[currentSlide].docElement.classList.add("d-none");
     currentSlide = slideOrder[currentSlide].next;
     slideOrder[currentSlide].docElement.classList.remove("d-none");
-})
+});
 
-// const backButton = document.getElementById("next");
-// nextButton.addEventListener("click", (event) => {
-//     slideOrder[currentSlide].docElement.classList.add("d-none");
-//     currentSlide = slideOrder[currentSlide].next;
-//     slideOrder[currentSlide].docElement.classList.remove("d-none");
-// })
+const backButton = document.getElementById("back");
+backButton.addEventListener("click", (event) => {
+    slideOrder[currentSlide].docElement.classList.add("d-none");
+    currentSlide = slideOrder[currentSlide].previous;
+    slideOrder[currentSlide].docElement.classList.remove("d-none");
+});
