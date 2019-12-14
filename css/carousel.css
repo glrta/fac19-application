@@ -58,10 +58,13 @@ h3 {
 
 @media screen and (max-width: 600px) {
     .arrow {
-        margin-left: -25px;
+        margin-left: -13px;
     }
     .back {
-        margin-left: -20px;
+        margin-left: -15px;
+    }
+    .arrow i {
+        font-size: 2rem;
     }
 }
 
