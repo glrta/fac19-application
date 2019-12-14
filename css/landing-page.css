@@ -38,6 +38,7 @@ nav {
 .crumb {
     padding: var(--spacing);
     color: var(--accentcolor);
+    cursor: pointer;
 }
 .active {
     color: var(--basecolor);
@@ -68,7 +69,7 @@ nav {
 @media screen and (max-width: 400px) {
     .crumb {
         padding: .1rem;
-}
+    }
 }
 
 @media screen and (max-width: 725px) {
@@ -92,11 +93,5 @@ nav {
     }
     .fab {
         transform: rotate(0deg);
-    }
-    .home {
-        background-image: url(../images/glrta.jpg); 
-        background-position: center;
-        background-size: 65%;
-        background-repeat: no-repeat;
     }
 }

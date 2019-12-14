@@ -2,7 +2,7 @@ let currentSlide = "surname";
 const slideOrder = {
     "surname": {
         slideElement: document.getElementById("surname"),
-        crumbElement: document.getElementById("crumb__home"),
+        crumbElement: document.getElementById("crumb__surname"),
         next: "about",
         previous: null,
     },
@@ -23,13 +23,11 @@ const slideOrder = {
 const nextButton = document.getElementById("next");
 nextButton.addEventListener("click", (event) => {
     update(slideOrder[currentSlide].next);
-    
 });
 
 const backButton = document.getElementById("back");
 backButton.addEventListener("click", (event) => { 
     update(slideOrder[currentSlide].previous);
-    
 });
 
 const update = (nextSlide) => {
@@ -61,3 +59,9 @@ const callArrowBehaviour = () => {
         backButton.classList.remove("d-none");
     }
 }
+
+
+const navLink = document.getElementById("navbar");
+navLink.addEventListener("click", (event) => {
+    update(event.target.id.slice(7));
+});

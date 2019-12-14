@@ -4,11 +4,19 @@
     grid-row: 2 / span 2;
     border-top: none;
 }
-.carousel, .surname, .about, .why {
+.carousel, .about, .why {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     text-align: right;
+}
+
+.surname {
+    flex-grow: 1;
+    display: grid;
+}
+h2 {
+    align-self: end;
 }
 .about, .why {
     flex-direction: column-reverse;
@@ -63,6 +71,12 @@ h3 {
     }
     .back {
         grid-column: 2 / span 3;
+    }
+    .surname {
+        background-image: url(../images/hi-tom-hanks-forrest-gump.gif); 
+        background-position: center;
+        background-size: 80%;
+        background-repeat: no-repeat;
     }
 }
 
