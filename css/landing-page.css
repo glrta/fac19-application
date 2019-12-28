@@ -1,5 +1,14 @@
 
-.home {
+/* || General layout set up */
+
+.outerlayout {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--mainborder);
+}
+.main {
     width: 100vw;
     justify-content: center;
     flex-grow: 1;
@@ -7,7 +16,8 @@
     grid-template-columns: 5vw 1fr var(--mainborder) 1fr 5vw;
     grid-template-rows: 10vh 1fr 1fr 10vh;
 }
-.left, .carousel {
+.left,
+.carousel {
     border: var(--mainborder) solid var(--basecolor);
 }
 .left {
@@ -15,33 +25,14 @@
     grid-row: 2 / span 1;
     border-bottom: none;
 }
-h1, h2, h3 {
-    text-transform: uppercase;
-    font-size: calc(2rem + 3vw);
-    font-weight: bold;
-}
- h1, h2, h3, nav, .portfolio {
-    padding: var(--mainborder);
-}
-nav {
+.crumbs {
     grid-column: 4 / span 1;
     grid-row: 2 / span 1;
     display: flex;
     align-items: flex-end;
     writing-mode: vertical-lr;
     background-color: var(--background);
-}
-.crumb, .portfolio {
-    display: flex;
-    flex-direction: column;
-}
-.crumb {
-    padding: var(--spacing);
-    color: var(--accentcolor);
-    cursor: pointer;
-}
-.active {
-    color: var(--basecolor);
+    margin-right: -1px;
 }
 .portfolio {
     grid-column: 2 / span 2;
@@ -50,33 +41,82 @@ nav {
     writing-mode: vertical-lr;
     transform: rotate(180deg);
 }
-.fab {
-    width: 2rem;
+
+/* || General styles */
+
+.title,
+.subtitles {
+    text-transform: uppercase;
+    font-size: calc(2rem + 3vw);
+    font-weight: bold;
+    padding: var(--mainborder) var(--mainborder) 0 var(--mainborder);
+}
+/* .subtitles {
+    padding: var(--mainborder) var(--mainborder) 0 var(--mainborder);
+} */
+h3 {
+    color: var(--mutecolor);
+} 
+.crumbs,
+.portfolio {
+    padding: var(--mainborder);
+}
+.crumb, 
+.portfolio {
+    display: flex;
+    flex-direction: column;
+}
+.crumb {
+    /* Navbar items now accentcolor, unless corresponding slide is active */
+    padding: var(--spacing);
+    color: var(--accentcolor);
+    cursor: pointer;
+}
+.active {
+    /* "Crumb" color changes from accentcolor to basecolor when corresponding slide is shown */
+    color: var(--basecolor);
+}
+.icon {
+    /* Brand icons */
     font-size: 1.5rem;
     padding: var(--spacing);
     transform: rotate(-180deg);
     color: var(--basecolor);
 }
-.link:hover {
+.codewars {
+    /* Codewars icon is a png, so width needs to be set */
+    width: 2rem;
+}
+.extlink:hover {
     font-weight: bold;
 }
-.link:hover::after {
+.extlink:hover::after {
     content: " >>";
     color: var(--accentcolor);
-    font-size: 1.5rem;
 }
 
+footer {
+    text-align: center;
+}
+footer p {
+    /* This makes final line of footer smaller and lighter color */
+    padding-top: var(--mainborder);
+    font-size: var(--smallestfont);
+    color: var(--secondarymute);
+}
+
+
+/* || Media queries for narrow screens */
 @media screen and (max-width: 450px) {
     .crumb {
         padding: .1rem;
     }
 }
-
 @media screen and (max-width: 725px) {
     .left {
         grid-column: 2 / span 3;
     }
-    nav {
+    .crumbs {
         grid-column: 4 / span 1;
         grid-row: 1 / span 1;
         writing-mode: horizontal-tb;
@@ -87,11 +127,20 @@ nav {
         grid-row: 4 / span 1;
         flex-direction: row;
         justify-content: center;
-        align-items: baseline;
         writing-mode: horizontal-tb;
         transform: rotate(0deg);
     }
-    .fab {
+    .icon {
         transform: rotate(0deg);
+        margin-right: .1rem;
+        padding: 0;
+    }
+    .horizontal {
+        display: flex;
+        align-items: baseline;
+        padding: 0 .4rem
+    }
+    .codewars {
+        width: 1.3rem;
     }
 }

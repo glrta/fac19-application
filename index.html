@@ -1,38 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Giovanna's application</title>
+    <link rel="icon" type="image/png" sizes="512x512" href="/images/favicon_io/android-chrome-512x512.png">
+    <title>Giovanna Aveiro | application to F&C spring cohort 2020</title>
     <meta name="author" content="Giovanna Licia R. T. Aveiro">
     <meta name="description" content="personal website submitted in December 2019 to Founders and Coders for the 2020 spring cohort">
     <link href="https://fonts.googleapis.com/css?family=Hind:300,400,500,600,700&display=swap" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
 </head>
-<body class="layout">
-    <main class="home" id="home">
-        <header class="left">
-            <h1>Giovanna L.</h1>
-        </header>
+<body class="outerlayout">
+    <main class="main" id="home">
+        <section class="left">
+            <h1 class="title">Giovanna L.</h1>
+        </section>
         <section class="carousel">
             <div class="slide surname" id="surname">
-                <h2>R. T. Aveiro</h2>
+                <h2 class="subtitles" >R. T. Aveiro</h2>
             </div>
             <div class="slide about d-none" id="about">
-                <h3>about me</h3>
+                <h3 class="subtitles">about me</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim aliquam eius unde mollitia illum nisi eveniet repellat delectus, exercitationem aperiam corrupti neque sequi perspiciatis natus, similique quas perferendis. Similique, harum.</p>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum quam cum fuga assumenda sed vel quae at laborum eos, consectetur commodi cupiditate minima reiciendis quis suscipit quo? Rerum, minus numquam!</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error velit dignissimos maiores itaque nam rem tenetur expedita exercitationem, sapiente nobis inventore excepturi dolorem. Animi sed alias quo. Saepe, consectetur eaque!</p>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error velit dignissimos maiores itaque nam rem tenetur expedita exercitationem, sapiente nobis inventore excepturi dolorem. Animi sed alias quo. Saepe, consectetur eaque!</p>
             </div>
             <div class="slide why d-none" id="why">
-                <h3>why</h3>
+                <h3 class="subtitles">why</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim aliquam eius unde mollitia illum nisi eveniet repellat delectus, exercitationem aperiam corrupti neque sequi perspiciatis natus, similique quas perferendis. Similique, harum.</p>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim aliquam eius unde mollitia illum nisi eveniet repellat delectus, exercitationem aperiam corrupti neque sequi perspiciatis natus, similique quas perferendis. Similique, harum.</p>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum quam cum fuga assumenda sed vel quae at laborum eos, consectetur commodi cupiditate minima reiciendis quis suscipit quo? Rerum, minus numquam!</p>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error velit dignissimos maiores itaque nam rem tenetur expedita exercitationem, sapiente nobis inventore excepturi dolorem. Animi sed alias quo. Saepe, consectetur eaque!</p>
             </div>
         </section>
-        <nav>
+        <button class="arrow next"><i id="next" class="controlers fas fa-angle-double-right"></i></button>
+        <button class="arrow back"><i id="back" class="controlers fas fa-angle-double-left d-none"></i></button>
+        <button class="loop"><i id="play" class="controlers fas fa-play-circle"></i></button>
+        <button class="loop"><i id="pause" class="controlers fas fa-pause-circle"></i></button>
+        <nav class="crumbs">
             <ul id="navbar">
                 <li class="crumb active" id="crumb__surname">.home</li>
                 <li class="crumb" id="crumb__about">.about me</li>
@@ -41,25 +47,23 @@
         </nav>
         <ul class="portfolio">
             <li>
-                <a class="link" title="glrta GitHub profile" target="_blank" href="https://github.com/glrta">
-                <i class="fab fa-github"></i>GitHub</a>
+                <a class="extlink horizontal" title="glrta GitHub profile" target="_blank" href="https://github.com/glrta">
+                <i class="icon fab fa-github"></i>GitHub</a>
+            </li>
+            <li class="">
+                <a class="extlink horizontal" title="glrta Codewars profile" target="_blank" href="https://www.codewars.com/users/glrta"><img class="icon fab codewars" src="./images/codewars-128.png">Codewars</a>
             </li>
             <li>
-                <a class="link" title="glrta Codewars profile" target="_blank" href="https://www.codewars.com/users/glrta"><img class="fab codewars" src="./images/codewars-128.png">Codewars</a>
-            </li>
-            <li>
-                <a class="link" title="glrta freecodecamp profile" target="_blank" href="https://www.freecodecamp.org/glrta">
-                <i class="fab fa-free-code-camp">
-                </i>freecodecamp</a>
+                <a class="extlink horizontal" title="glrta freeCodeCamp profile" target="_blank" href="https://www.freecodecamp.org/glrta">
+                <i class="icon fab fa-free-code-camp">
+                </i>freeCodeCamp</a>
             </li>
         </ul>
-        <a class="arrow next" type="button"><i id="next" class="fas fa-angle-double-right"></i></a>
-        <a class="arrow back" type="button"><i id="back" class="fas fa-angle-double-left d-none"></i></a>
     </main>
     <footer>
-        <a title="website repository on GitHub" href="">this@GitHub</a>
-        <p>2020 spring cohort applicant</p>
+        <a class="extlink" title="website repository on GitHub" target="_blank" href="https://github.com/glrta/glrta-portfolio-fac">this@GitHub</a>
+        <p>by Giovanna - Dec 2019</p>
     </footer>
+    <script src="js/main.js"></script> 
 </body>
-<script src="js/main.js"></script> 
 </html>

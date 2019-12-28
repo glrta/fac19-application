@@ -1,14 +1,37 @@
+/* MDN Organizing your CSS: https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Organizing */
+/* || Global variables */
+
 :root {
+
+    /* Spacing  */
     --mainborder: 10px;
     --doubleborder: 20px;
-    --spacing: .3rem;
+    --spacing: .4rem;
+    /* Color palette */
     --basecolor: #8000ff;
     --accentcolor: #00ff80; 
     --mutecolor: #f5ebff;
     --secondarymute: #d8b1ff;
     --background: #fcfcfc;
+    /* Font sizing: mobile and wider screen */
+    --smallestfont: .8rem;
+    --fontmobile: .9rem;
+    --fontsize: 16px;
+    --largerfont: 1.5rem;
 }
 
+/* || Global styles */
+
+body {
+    /* Typography */
+    font-family: 'Hind', helvetica, san-serif;
+    font-size: var(--fontsize);
+    /* Color */
+    color: var(--basecolor);
+    background: var(--background);
+}
+
+/*  || Style fixers */
 * {
     box-sizing: border-box;
 }
@@ -16,8 +39,22 @@ a {
     text-decoration: none;
     color: var(--basecolor);
 }
-html {
-    font-family: 'Hind', helvetica, san-serif;
-    color: var(--basecolor);
-    background: var(--background);
+button {
+    border: 0;
+    padding: 0;
+    box-shadow: none;
+    outline: none;
+}
+
+/*  Typography for narrow screens */
+@media screen and (max-width: 600px) {
+    body {
+        font-size: var(--fontmobile);
+    }
+}
+/*  Typography for wider screens */
+@media screen and (min-width: 1750px) {
+    body {
+        font-size: var(--largerfont);
+    }
 }
