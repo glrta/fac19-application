@@ -25,13 +25,17 @@
     grid-row: 2 / span 1;
     border-bottom: none;
 }
+.carousel {
+    border-top: none;
+}
 .crumbs {
     grid-column: 4 / span 1;
     grid-row: 2 / span 1;
     display: flex;
     align-items: flex-end;
     writing-mode: vertical-lr;
-    background-color: var(--background);
+    /* This prevents purple border from appearing underneath .crumbs */
+    border-right: solid var(--background) 12px;
     margin-right: -1px;
 }
 .portfolio {
@@ -51,12 +55,9 @@
     font-weight: bold;
     padding: var(--mainborder) var(--mainborder) 0 var(--mainborder);
 }
-/* .subtitles {
-    padding: var(--mainborder) var(--mainborder) 0 var(--mainborder);
-} */
 h3 {
     color: var(--mutecolor);
-} 
+}
 .crumbs,
 .portfolio {
     padding: var(--mainborder);
@@ -78,7 +79,7 @@ h3 {
 }
 .icon {
     /* Brand icons */
-    font-size: 1.5rem;
+    font-size: var(--largerfont);
     padding: var(--spacing);
     transform: rotate(-180deg);
     color: var(--basecolor);
@@ -93,6 +94,10 @@ h3 {
 .extlink:hover::after {
     content: " >>";
     color: var(--accentcolor);
+}
+.bold {
+    /*  Hyperlink within content */
+    font-weight: bold;
 }
 
 footer {
@@ -112,6 +117,8 @@ footer p {
         padding: .1rem;
     }
 }
+
+/* || Tweak points for screens up to 725px */
 @media screen and (max-width: 725px) {
     .left {
         grid-column: 2 / span 3;

@@ -10,8 +10,8 @@
     /* Color palette */
     --basecolor: #8000ff;
     --accentcolor: #00ff80; 
-    --mutecolor: #f5ebff;
-    --secondarymute: #d8b1ff;
+    --mutecolor: #eedfff;
+    --secondarymute: #d8b2ff;
     --background: #fcfcfc;
     /* Font sizing: mobile and wider screen */
     --smallestfont: .8rem;

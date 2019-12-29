@@ -7,10 +7,7 @@
     /* Turns grid items into flex containers */
     display: flex;
     justify-content: flex-end;
-    /* Aligns titles and text to the right  */
-    text-align: right;
 }
-
 .carousel {
     /* this places the carousel at the right side of the grid inherited from parent container */
     grid-column: 3 / span 2;
@@ -23,34 +20,30 @@
     /* This puts titles after text */
     flex-direction: column-reverse;
     /* Prevents from overlaping h1 */
-    margin-top: 100px;
-    /* Text overflow appears over nac background */
-    z-index: 1;
+    margin-top: 110px;
 }
 .surname {
-    /* Surname slide size equals "main" height */
+    /* Surname slide size equals "main" height for background image */
     flex-grow: 1;
+    background-image: url(../images/hi-tom-hanks-forrest-gump.gif); 
+    background-position: center;
+    background-size: 80%;
+    background-repeat: no-repeat;
     /* Will allow title to be positioned at the bottom right */
     display: grid;
 }
 h2 {
     align-self: end;
 }
-
 .d-none {
     /* Class used to hide slides in the carousel */
     display: none;
-}
-
-.slide p {
-    padding: var(--spacing);
 }
 .controlers {
     color: var(--accentcolor);
     cursor: pointer;
     z-index: 10;
 }
-
 .arrow i {
     font-size: 3rem;
 }
@@ -86,6 +79,29 @@ h2 {
     padding-top: .5rem;
 }
 
+/* || Specific styles */
+
+.subtitles,
+.topic {
+    /* Aligns all subtitles to the right */
+    text-align: right;
+}
+.topic {
+    font-weight: bold;
+    color: var(--mutecolor);
+    padding-top: var(--spacing);
+}
+.content {
+    margin: var(--mainborder);
+}
+.content > ul > li::before {
+    /*  Adds icon to list items */
+    content: "- ";
+}
+
+
+/* || Media querie for narrow screens */
+
 @media screen and (max-width: 600px) {
     .arrow {
         margin-left: -13px;
@@ -98,16 +114,11 @@ h2 {
     }
 }
 
+/* || Tweak points for screens up to 725px */
 @media screen and (max-width: 725px) {
     .carousel,
     .back {
         grid-column: 2 / span 3;
-    }
-    .surname {
-        background-image: url(../images/hi-tom-hanks-forrest-gump.gif); 
-        background-position: center;
-        background-size: 80%;
-        background-repeat: no-repeat;
     }
 }
 
