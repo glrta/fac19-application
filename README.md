@@ -3,7 +3,7 @@
 ![Website screenshot - desktop](./images/website-screenshot.png)
  
 ## Prerequisites
-As per December 2019, [Founders and Coders](https://www.foundersandcoders.com) application prerequisites included :scream: :
+As per December 2019, [Founders and Coders](https://www.foundersandcoders.com) application prerequisites are :scream::
 
 * Create a personal website
     * Create a one-page website in HTML and CSS (using some vanilla JavaScript if you’d like) and host it on GitHub Pages. [Your commit history should tell a story](https://www.mokacoding.com/blog/your-git-log-should-tell-a-story/), and your website must be written by you, and:
@@ -15,7 +15,7 @@ As per December 2019, [Founders and Coders](https://www.foundersandcoders.com) a
     * Be hosted on Github
     * Not use a GitHub theme
     * Not use any JavaScript or CSS libraries like Bootstrap or jQuery or use an image carousel package like Flickity ⁠— we want to see your own code.
-    * Include an image [carousel](https://github.com/foundersandcoders/master-reference/blob/master/coursebook/prerequisites/image-carousel.md) (the image carousel must be built into your website, a link to a separate page or CodePen will not be accepted)
+    * Include an image [carousel](https://github.com/foundersandcoders/master-reference/blob/master/coursebook/prerequisites/image-carousel.md) (the image carousel must be built into your website, a link to a separate page or CodePen will not be accepted) that meets the following criteria:
         * Responsive (works on mobile and desktop)
         * Display one image at a time
         * Move between images when clicking navigation buttons
@@ -41,8 +41,9 @@ As per December 2019, [Founders and Coders](https://www.foundersandcoders.com) a
 
 ## Implementation 
 
-The website was build with HTML, CSS and Javascript. 
+This responsive single-page website was built with HTML, CSS and Javascript.
 
-JavaScript was used to loop through the carousel slides and navbar elements. 
+To meet the requirements, I wanted the website to contain a welcoming landing page, some information about me and the reasons why I should join the Founders and Coders community. These were then made into three separate slides of a carousel. 
 
-CSS styles  
+**Carousel:** 
+The carousel `<section>` takes the right side of the viewport when in desktop mode and the bottom half on narrower screens. JavaScript was used to loop through the slides `surname`, `about` and `why` which is achieved with a `<d-none>` tag added to the slides that aren't visible at a given point. To navigate through the content, the user has the option of playing an automated slideshow, use the arrow buttons, the keyboard right/left arrow keys or the navigation bar. 

@@ -96,6 +96,7 @@ h2 {
 }
 .content {
     margin: var(--doubleborder);
+    text-align: justify;
 }
 .content > ul > li::before {
     /*  Adds icon to list items */
