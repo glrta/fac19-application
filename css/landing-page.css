@@ -118,8 +118,8 @@ footer p {
     }
 }
 
-/* || Tweak points for screens up to 725px */
-@media screen and (max-width: 725px) {
+/* || Tweak points for screens up to 1040px */
+@media screen and (max-width: 1040px) {
     .left {
         grid-column: 2 / span 3;
     }

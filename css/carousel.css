@@ -81,24 +81,26 @@ h2 {
 
 /* || Specific styles */
 
-.subtitles,
-.topic {
+.subtitles {
     /* Aligns all subtitles to the right */
     text-align: right;
 }
 .topic {
     font-weight: bold;
     color: var(--mutecolor);
+    /* padding-top: var(--spacing); */
+    font-size: 1.1rem;
+}
+.p {
     padding-top: var(--spacing);
 }
 .content {
-    margin: var(--mainborder);
+    margin: var(--doubleborder);
 }
 .content > ul > li::before {
     /*  Adds icon to list items */
-    content: "- ";
+    content: ". ";
 }
-
 
 /* || Media querie for narrow screens */
 
@@ -114,8 +116,8 @@ h2 {
     }
 }
 
-/* || Tweak points for screens up to 725px */
-@media screen and (max-width: 725px) {
+/* || Tweak points for screens up to 140px */
+@media screen and (max-width: 1040px) {
     .carousel,
     .back {
         grid-column: 2 / span 3;

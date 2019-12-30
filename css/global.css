@@ -10,14 +10,15 @@
     /* Color palette */
     --basecolor: #8000ff;
     --accentcolor: #00ff80; 
-    --mutecolor: #eedfff;
-    --secondarymute: #d8b2ff;
-    --background: #fcfcfc;
+    --mutecolor: #e9dafa;    ;
+    --secondarymute: #d6c8e5;
+    --background: #fff;
     /* Font sizing: mobile and wider screen */
     --smallestfont: .8rem;
     --fontmobile: .9rem;
     --fontsize: 16px;
     --largerfont: 1.5rem;
+    --lineheight: 1.4rem;
 }
 
 /* || Global styles */
