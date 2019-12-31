@@ -4,77 +4,73 @@
 .carousel, 
 .about, 
 .why {
-    /* Turns grid items into flex containers */
-    display: flex;
+    display: flex; /* Turns grid items into flex containers */
     justify-content: flex-end;
 }
 .carousel {
     /* this places the carousel at the right side of the grid inherited from parent container */
     grid-column: 3 / span 2;
     grid-row: 2 / span 2;
-    /* Carousel slides in single column */
-    flex-direction: column;
+    flex-direction: column;  /* Carousel slides in single column */
 } 
 .about, 
 .why {
-    /* This puts titles after text */
-    flex-direction: column-reverse;
-    /* Prevents from overlaping h1 */
-    margin-top: 110px;
+    flex-direction: column-reverse; /* Puts titles after text */
+    margin-top: 110px;  /* Prevents carousel text from overlaping h1 and navbar */
 }
 .surname {
-    /* Surname slide size equals "main" height for background image */
-    flex-grow: 1;
+    
+    flex-grow: 1; /* Surname slide size equals "main" height to allow background image */
     background-image: url(../images/hi-tom-hanks-forrest-gump.gif); 
     background-position: center;
     background-size: 80%;
     background-repeat: no-repeat;
-    /* Will allow title to be positioned at the bottom right */
-    display: grid;
+    display: grid;  /* Will allow title to be positioned at the bottom right */
 }
 h2 {
-    align-self: end;
+    align-self: end; /* Places h2 at right bottom corner */
 }
 .d-none {
-    /* Class used to hide slides in the carousel */
-    display: none;
-}
-.controlers {
-    color: var(--accentcolor);
-    cursor: pointer;
-    z-index: 10;
-}
-.arrow i {
-    font-size: 3rem;
-}
-.loop i {
-    font-size: 2rem;
+    
+    display: none; /* Hides slides in the carousel */
 }
 .arrow,
 .loop {
-    justify-self: start;
-    background-color: var(--background);
-    z-index: 1;
+    cursor: pointer;
+    color: var(--accentcolor); /* Change arrows to green */
+    justify-self: start; /* Places arrows at the beginning of their grid area */
+    background-color: var(--background); /* Covers purple border */
+    z-index: 1; /* Buttons appear on top of other elements */
+}
+.arrow i {
+    font-size: 3rem; /* Sets size of arrow icons */
+}
+.loop i {
+    
+    font-size: 2rem; /*  Automated loop pause/play buttons are smaller then arrow buttons */
 }
 .next {
+    /* Places foward arrow on main grid layout */
     grid-column: 5 / span 1;
     grid-row: 2 / span 1;
-    margin-left: -15px;
+    margin-left: -15px; /* Aligns foward arrow with line of purple border */
 }
 .back {
+    /* Places back arrow on main grid layout */
     grid-column: 3 / span 2;
     grid-row: 2 / span 1;
-    margin-left: -25px;
+    margin-left: -25px; /* Aligns back arrow with line of purple border */
 }
 .arrow {
-    align-self: end;
+    align-self: end; /* Places arrows at the bottom of their grid area */
 }
 
 .loop {
+    /* Places play/pause buttons in the main grid layout */
     grid-column: 5 / span 1;
     grid-row: 3 / span 1;
-    align-self: start;
-    margin-left: -15px;
+    align-self: start; /* Places buttons at the beginning of their grid area */
+    margin-left: -15px; /* Aligns buttons with line of purple border  */
     padding-bottom: .5rem;
     padding-top: .5rem;
 }
@@ -82,38 +78,35 @@ h2 {
 /* || Specific styles */
 
 .subtitles {
-    /* Aligns all subtitles to the right */
-    text-align: right;
+    text-align: right; /* Aligns h2 and h3 to the right */
 }
 .topic {
-    font-weight: bold;
-    color: var(--mutecolor);
-    /* padding-top: var(--spacing); */
-    font-size: 1.1rem;
+    font-weight: bold; /* Makes inner topics of about and why font bolder than content */
+    color: var(--mutecolor); /* Makes inner topics of about and why lighter than content */
+    font-size: 1.1rem; /* Makes inner topics of about and why bigger than content */
 }
 .p {
-    padding-top: var(--spacing);
+    padding-top: var(--spacing); /* Adds space between paragraphs */
 }
 .content {
-    margin: var(--doubleborder);
-    text-align: justify;
+    margin: var(--doubleborder); /* Adds space between content and purple border */
+    text-align: justify; /* Content followys box-like design */
 }
 .content > ul > li::before {
-    /*  Adds icon to list items */
-    content: ". ";
+    content: ". ";  /*  Adds . before each list item of about slide */
 }
 
 /* || Media querie for narrow screens */
 
 @media screen and (max-width: 600px) {
     .arrow {
-        margin-left: -13px;
+        margin-left: -13px; /* Aligns arrows with line of purple border */
     }
     .arrow i {
-        font-size: 2rem;
+        font-size: 2rem; /* Makes arrow buttons smaller */
     }
     .loop i {
-        font-size: 1.5rem;
+        font-size: 1.5rem; /* Makes play/pause buttons smaller */
     }
 }
 
@@ -121,7 +114,7 @@ h2 {
 @media screen and (max-width: 1040px) {
     .carousel,
     .back {
-        grid-column: 2 / span 3;
+        grid-column: 2 / span 3;  /* Moves carousel from rigth to bottom of main layout */
     }
 }
 

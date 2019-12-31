@@ -3,7 +3,8 @@
 
 .outerlayout {
     height: 100vh;
-    display: flex;
+    /* Landing page is a flex column with main section and footer */
+    display: flex; 
     flex-direction: column;
     align-items: center;
     padding: var(--mainborder);
@@ -11,39 +12,40 @@
 .main {
     width: 100vw;
     justify-content: center;
-    flex-grow: 1;
-    display: grid;
+    flex-grow: 1; /* Ensures main section takes up empty space on the page */
+    display: grid; /* Sets the grid of main section  */
     grid-template-columns: 5vw 1fr var(--mainborder) 1fr 5vw;
     grid-template-rows: 10vh 1fr 1fr 10vh;
 }
 .left,
 .carousel {
-    border: var(--mainborder) solid var(--basecolor);
+    border: var(--mainborder) solid var(--basecolor); /* Sets the purpler border of layout */
 }
 .left {
+    /* Places left on half left of the main grid */
     grid-column: 2 / span 2;
     grid-row: 2 / span 1;
-    border-bottom: none;
+    border-bottom: none; /* Removes border from bottom of element */
 }
 .carousel {
-    border-top: none;
+    border-top: none; /* Removes border from top of element */
 }
 .crumbs {
+    /* Places navbar on top right corner of main grid */
     grid-column: 4 / span 1;
     grid-row: 2 / span 1;
     display: flex;
     align-items: flex-end;
-    writing-mode: vertical-lr;
-    /* This prevents purple border from appearing underneath .crumbs */
-    border-right: solid var(--background) 12px;
-    margin-right: -1px;
+    writing-mode: vertical-lr; /* Rotates elements to vertical position */
+    border-right: solid var(--background) 12px; /* Covers purple border on rigth side of main grid */
+    margin-right: -1px; /* This prevents purple border from appearing underneath .crumbs */
 }
 .portfolio {
     grid-column: 2 / span 2;
     grid-row: 3 / span 1;
     justify-content: flex-end;
-    writing-mode: vertical-lr;
-    transform: rotate(180deg);
+    writing-mode: vertical-lr; /* Rotates elements to vertical position */
+    transform: rotate(180deg); /* Rotates elements so they read from bottom to top */
 }
 
 /* || General styles */
@@ -51,34 +53,32 @@
 .title,
 .subtitles {
     text-transform: uppercase;
-    font-size: calc(2rem + 3vw);
+    font-size: calc(2rem + 3vw); /* H1, h2 and h3 size vary according to viewport width */
     font-weight: bold;
-    padding: var(--mainborder) var(--mainborder) 0 var(--mainborder);
+    padding: var(--mainborder) var(--mainborder) 0 var(--mainborder); /* H1, h2 and h3 have the same distance from purple border */
 }
 h3 {
     color: var(--mutecolor);
 }
 .crumbs,
 .portfolio {
-    padding: var(--mainborder);
+    padding: var(--mainborder); /* Links at bottom left and navbar at top right have the same distance from main grid corners */
 }
 .crumb, 
 .portfolio {
-    display: flex;
+    display: flex; /* Links at the bottom left and navbar at top right are flex to appear as list */
     flex-direction: column;
 }
 .crumb {
-    /* Navbar items now accentcolor, unless corresponding slide is active */
     padding: var(--spacing);
-    color: var(--accentcolor);
+    color: var(--accentcolor); /* Navbar items accentcolor, unless corresponding slide is active */
     cursor: pointer;
 }
 .active {
-    /* "Crumb" color changes from accentcolor to basecolor when corresponding slide is shown */
-    color: var(--basecolor);
+    color: var(--basecolor);  /* Color of navbar elements changes to basecolor when corresponding slide is shown */
 }
 .icon {
-    /* Brand icons */
+    /* freeCodeCamp and GitHub brand icons style */
     font-size: var(--largerfont);
     padding: var(--spacing);
     transform: rotate(-180deg);
@@ -89,27 +89,26 @@ h3 {
     width: 2rem;
 }
 .extlink:hover {
-    font-weight: bold;
+    font-weight: bold;  /* Font changes to bold on hover */
 }
 .extlink:hover::after {
-    content: " >>";
+    /* Adds green arrows to external links on hover */
+    content: " >>"; 
     color: var(--accentcolor);
 }
 .bold {
-    /*  Hyperlink within content */
-    font-weight: bold;
+    font-weight: bold; /*  Hyperlink within content */
 }
 
 footer {
     text-align: center;
 }
 footer p {
-    /* This makes final line of footer smaller and lighter color */
+    /* Changes final line of footer to smaller size and lighter color */
     padding-top: var(--mainborder);
     font-size: var(--smallestfont);
     color: var(--secondarymute);
 }
-
 
 /* || Media queries for narrow screens */
 @media screen and (max-width: 450px) {
@@ -121,33 +120,33 @@ footer p {
 /* || Tweak points for screens up to 1040px */
 @media screen and (max-width: 1040px) {
     .left {
-        grid-column: 2 / span 3;
+        grid-column: 2 / span 3; /* Moves left to top of main layout */
     }
     .crumbs {
         grid-column: 4 / span 1;
-        grid-row: 1 / span 1;
-        writing-mode: horizontal-tb;
+        grid-row: 1 / span 1; /* Moves navbar to top right of screen */
+        writing-mode: horizontal-tb; /* Rotates navbar elements back to western writing mode */
         justify-content: flex-end;
     }
     .portfolio {
         grid-column: 2 / span 3;
-        grid-row: 4 / span 1;
-        flex-direction: row;
+        grid-row: 4 / span 1; /* External links move to bottom of main layout, after carousel */
+        flex-direction: row; /* Moves links from column to row */
         justify-content: center;
-        writing-mode: horizontal-tb;
-        transform: rotate(0deg);
+        writing-mode: horizontal-tb; /* Rotates links back to western writing mode */
+        transform: rotate(0deg); /* Rotates links back to horizontal position */
     }
     .icon {
-        transform: rotate(0deg);
+        transform: rotate(0deg); /* Rotates icons back to normal */
         margin-right: .1rem;
         padding: 0;
     }
     .horizontal {
-        display: flex;
-        align-items: baseline;
-        padding: 0 .4rem
+        display: flex; /* Turns elements inside external links into flex items */
+        align-items: baseline; /* Aligns brand icons and text */
+        padding: 0 .4rem /* Adds space between external links */
     }
     .codewars {
-        width: 1.3rem;
+        width: 1.3rem; /* Codewars brand image smaller */
     }
 }

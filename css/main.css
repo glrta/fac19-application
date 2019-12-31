@@ -3,7 +3,7 @@
 @import "./fontawesome-free-5.12.0-web/css/brands.min.css";
 @import "./fontawesome-free-5.12.0-web/css/solid.min.css";
 @import "./fontawesome-free-5.12.0-web/css/solid.css";
-@import "./global.css";
-@import "./landing-page.css";
-@import "./carousel.css";
+@import "./global.css"; /* Variables, fixers and typography */
+@import "./landing-page.css"; /* General styles and main layout */
+@import "./carousel.css"; /* Carousel and specific styles */
 
