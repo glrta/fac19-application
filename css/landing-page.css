@@ -3,6 +3,7 @@
 
 .outerlayout {
     height: 100vh;
+    height: calc(var(--vh, 1vh) * 100); /* Viewport height fix for mobile (see js main file for more) */
     /* Landing page is a flex column with main section and footer */
     display: flex; 
     flex-direction: column;
@@ -78,15 +79,15 @@ h3 {
     color: var(--basecolor);  /* Color of navbar elements changes to basecolor when corresponding slide is shown */
 }
 .icon {
-    /* freeCodeCamp and GitHub brand icons style */
+    /* freeCodeCamp, GitHub and Codewars brand icons style */
     font-size: var(--largerfont);
-    padding: var(--spacing);
+    margin: var(--spacing); /* Adds space around external links */
     transform: rotate(-180deg);
     color: var(--basecolor);
 }
 .codewars {
     /* Codewars icon is a png, so width needs to be set */
-    width: 2rem;
+    width: 1.5rem;
 }
 .extlink:hover {
     font-weight: bold;  /* Font changes to bold on hover */
@@ -102,23 +103,20 @@ h3 {
 
 footer {
     text-align: center;
+    margin-top: var(--mainborder);
 }
 footer p {
     /* Changes final line of footer to smaller size and lighter color */
-    padding-top: var(--mainborder);
+    margin-top: var(--mainborder);
     font-size: var(--smallestfont);
     color: var(--secondarymute);
 }
 
-/* || Media queries for narrow screens */
-@media screen and (max-width: 450px) {
-    .crumb {
-        padding: .1rem;
-    }
-}
+/* || Media queries */
 
-/* || Tweak points for screens up to 1040px */
-@media screen and (max-width: 1040px) {
+/* Tweak points for screens up to 1040px */
+@media only screen 
+    and (max-width: 1040px) {
     .left {
         grid-column: 2 / span 3; /* Moves left to top of main layout */
     }
@@ -128,6 +126,9 @@ footer p {
         writing-mode: horizontal-tb; /* Rotates navbar elements back to western writing mode */
         justify-content: flex-end;
     }
+    .crumb {
+        padding: .1rem;
+    }
     .portfolio {
         grid-column: 2 / span 3;
         grid-row: 4 / span 1; /* External links move to bottom of main layout, after carousel */
@@ -136,17 +137,48 @@ footer p {
         writing-mode: horizontal-tb; /* Rotates links back to western writing mode */
         transform: rotate(0deg); /* Rotates links back to horizontal position */
     }
-    .icon {
-        transform: rotate(0deg); /* Rotates icons back to normal */
-        margin-right: .1rem;
-        padding: 0;
-    }
     .horizontal {
         display: flex; /* Turns elements inside external links into flex items */
         align-items: baseline; /* Aligns brand icons and text */
-        padding: 0 .4rem /* Adds space between external links */
+        margin-right: var(--spacing);
+       
+
+    }
+    .icon {
+        transform: rotate(0deg); /* Rotates icons back to normal */
+        font-size: var(--smallestfont);
+        margin: var(--mainborder) .2rem; /* Adds space around external links */
     }
     .codewars {
-        width: 1.3rem; /* Codewars brand image smaller */
+        width: .7rem; /* Codewars brand image smaller */
     }
+}
+
+/* Twaek points for mobile in landscape orientation mode */
+@media only screen 
+    and (max-width: 900px) 
+    and (orientation: landscape) {
+    .title,
+    .subtitles {
+    font-size: calc(2rem + 2vw); /* H1, h2 and h3 smaller */
+    }
+    .crumbs ul {
+        display: flex; /* Changes navbar to row */    
+    }
+    footer {
+        display: flex; /* Changes footer elements to same row */ 
+    }
+    footer a {
+        /* Changes footer elements to same color and size */  
+        font-size: var(--smallestfont);
+        color: var(--secondarymute);
+    }
+    footer p {
+        margin-top: 0;
+    }
+    footer a:after, 
+    footer p:before {
+        content: " | ";
+    }
+    
 }

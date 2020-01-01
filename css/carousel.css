@@ -16,7 +16,7 @@
 .about, 
 .why {
     flex-direction: column-reverse; /* Puts titles after text */
-    margin-top: 110px;  /* Prevents carousel text from overlaping h1 and navbar */
+    margin-top: 70px;  /* Prevents carousel text from overlaping h1 and navbar */
 }
 .surname {
     
@@ -96,9 +96,11 @@ h2 {
     content: ". ";  /*  Adds . before each list item of about slide */
 }
 
-/* || Media querie for narrow screens */
+/* || Media querie */
 
-@media screen and (max-width: 600px) {
+/* For narrow screens */
+@media only screen 
+    and (max-width: 600px) {
     .arrow {
         margin-left: -13px; /* Aligns arrows with line of purple border */
     }
@@ -110,7 +112,7 @@ h2 {
     }
 }
 
-/* || Tweak points for screens up to 140px */
+/* Tweak points for screens up to 140px */
 @media screen and (max-width: 1040px) {
     .carousel,
     .back {
@@ -118,3 +120,12 @@ h2 {
     }
 }
 
+/* Twaek points for mobile in landscape orientation mode */
+
+@media only screen 
+    and (max-width: 900px) 
+    and (orientation: landscape) {
+    .surname {
+        background-size: 40%;
+    }
+}

@@ -100,7 +100,8 @@ loopButton.addEventListener("click", (event) => { // Event listener
     if (playing) {
         pauseSlideShow();
     } else {
-        playSlideShow();
+        changeSlide(); // Upon click, goes to next slide
+        playSlideShow(); // From next slide starts slideshow
     }
 })
 const playSlideShow = () => { // Execution: play
@@ -122,3 +123,21 @@ const navLink = document.getElementById("navbar");
 navLink.addEventListener("click", (event) => {
     update(event.target.id.slice(7));
 });
+
+
+// || Viewport height fix for mobile
+
+//For details, see https://css-tricks.com/the-trick-to-viewport-units-on-mobile/
+
+// Gets the viewport height and multiples it by 1% to get a value for a vh unit
+let vh = window.innerHeight * 0.01;
+
+// Then sets the value in the --vh custom property to the root of the document
+document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+// Listens to the resize event
+window.addEventListener('resize', () => {
+    // Executes the same script as before
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+  });
