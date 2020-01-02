@@ -3,7 +3,7 @@
 ![Website screenshot - desktop](./images/website-screenshot.png)
  
 ## Prerequisites
-As per December 2019, [Founders and Coders](https://www.foundersandcoders.com) application prerequisites are :scream::
+As per December 2019, [Founders and Coders](https://www.foundersandcoders.com) application prerequisites were :scream::
 
 * Create a personal website
     * Create a one-page website in HTML and CSS (using some vanilla JavaScript if you’d like) and host it on GitHub Pages. [Your commit history should tell a story](https://www.mokacoding.com/blog/your-git-log-should-tell-a-story/), and your website must be written by you, and:

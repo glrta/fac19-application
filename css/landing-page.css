@@ -2,7 +2,7 @@
 /* || General layout set up */
 
 .outerlayout {
-    height: 100vh;
+    height: 100vh; /* Fallback, if below doesn't work */
     height: calc(var(--vh, 1vh) * 100); /* Viewport height fix for mobile (see js main file for more) */
     /* Landing page is a flex column with main section and footer */
     display: flex; 
@@ -27,6 +27,7 @@
     grid-column: 2 / span 2;
     grid-row: 2 / span 1;
     border-bottom: none; /* Removes border from bottom of element */
+    z-index: 1; /* Fallback so h1 is always visible */
 }
 .carousel {
     border-top: none; /* Removes border from top of element */
@@ -162,6 +163,10 @@ footer p {
     .subtitles {
     font-size: calc(2rem + 2vw); /* H1, h2 and h3 smaller */
     }
+    .crumbs {
+        border-right: 0;
+        padding-right: 0;
+    }
     .crumbs ul {
         display: flex; /* Changes navbar to row */    
     }
@@ -178,7 +183,7 @@ footer p {
     }
     footer a:after, 
     footer p:before {
-        content: " | ";
+        content: " | "; /* Separetes elements in footer */ 
     }
     
 }

@@ -49,14 +49,16 @@ button {
     outline: none;
 }
 
-/*  Typography for narrow screens */
+/* ||  Font-size media queries */
+
+/*  Font-size for narrow screens */
 @media screen and (max-width: 600px) {
     body {
         font-size: var(--fontmobile);
     }
 }
-/*  Typography for wider screens */
-@media screen and (min-width: 1750px) {
+/*  Font-size for wider screens */
+@media screen and (min-width: 2500px) {
     body {
         font-size: var(--largerfont);
     }
