@@ -2,7 +2,7 @@
 
 ![Website screenshot - desktop](./images/website-screenshot.png)
  
-## Prerequisites
+## Application prerequisites
 As per December 2019, [Founders and Coders](https://www.foundersandcoders.com) application prerequisites were :scream::
 
 * Create a personal website

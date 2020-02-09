@@ -65,7 +65,7 @@ const callNextSlide = () => {
     slideOrder[currentSlide].slideElement.classList.remove("d-none");
     slideOrder[currentSlide].crumbElement.classList.add("active");
 }
-// 3. Controlls what arrows appear/disapper with slide
+// 3. Controls what arrows appear/disappear with slide
 const callArrowBehaviour = () => {
     if ( !slideOrder[currentSlide].next ) {
         nextButton.classList.add("d-none");
@@ -125,19 +125,23 @@ navLink.addEventListener("click", (event) => {
 });
 
 
+
 // || Viewport height fix for mobile
 
 //For details, see https://css-tricks.com/the-trick-to-viewport-units-on-mobile/
 
-// Gets the viewport height and multiples it by 1% to get a value for a vh unit
-let vh = window.innerHeight * 0.01;
-
-// Then sets the value in the --vh custom property to the root of the document
-document.documentElement.style.setProperty('--vh', `${vh}px`);
+const resizeVH = () => {
+    // Sets vh as window inner height
+    let vh = window.innerHeight;
+    // Then sets the value in the --vh custom property to the root of the document
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+} 
+resizeVH();
 
 // Listens to the resize event
 window.addEventListener('resize', () => {
-    // Executes the same script as before
-    let vh = window.innerHeight * 0.01;
-    document.documentElement.style.setProperty('--vh', `${vh}px`);
+    // Executes the same function as before
+   resizeVH();
   });
+
+  
